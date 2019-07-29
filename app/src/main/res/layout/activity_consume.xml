@@ -1,9 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConsumeActivity">
+    android:orientation="vertical"
+    tools:context=".consume.ConsumeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/tvToday"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvEat"
+        android:layout_below="@+id/tvToday">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:text="Tien an: "
+            android:gravity="left|center" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:singleLine="true"
+            android:imeOptions="actionNext"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvStay"
+        android:layout_below="@+id/tvEat">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:text="Tien o: "
+            android:gravity="left|center" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:singleLine="true"
+            android:imeOptions="actionNext" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvLive"
+        android:layout_below="@+id/tvStay">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:text="Tien sinh hoat: "
+            android:gravity="left|center" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:id="@+id/tvShortest"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/tvOther"
+        android:layout_below="@+id/tvLive">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            android:text="Tien khac: "
+            android:gravity="left|center"
+/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="0.75"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:singleLine="true"
+            android:imeOptions="actionDone"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/tvOther"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:text="OK"
+        android:textColor="@color/white"/>
+
+
+
+</RelativeLayout>

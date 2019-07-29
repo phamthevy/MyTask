@@ -1,8 +1,10 @@
-package com.thevy.mytask;
+package com.thevy.mytask.consume;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.thevy.mytask.R;
 
 public class ConsumeActivity extends AppCompatActivity {
 

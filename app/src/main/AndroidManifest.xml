@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnalyticActivity"></activity>
-        <activity android:name=".ConsumeActivity" />
-        <activity android:name=".BookActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".task.RewardActivity"></activity>
+        <!--<activity android:name=".analytic.AnalyticActivity" />-->
+        <activity android:name=".consume.ConsumeActivity" />
+        <activity android:name=".book.BookActivity" />
+        <!-- <activity android:name=".HomeActivity" /> -->
+        <activity android:name=".analytic.AnalyticActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

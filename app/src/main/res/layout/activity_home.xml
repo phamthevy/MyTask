@@ -6,12 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".HomeActivity">
+    tools:context=".task.HomeActivity">
 
-    <FrameLayout
-        android:id="@+id/content_frame"
+    <RelativeLayout
+        android:id="@+id/content_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -19,7 +20,57 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimaryDark"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
-    </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/tvToday"
+            android:gravity="center"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today: "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvToday"
+            android:layout_above="@+id/btnOKTask"
+            android:id="@+id/recycler_view">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnOKTask"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:layout_above="@+id/tvReward"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvReward"
+            android:text="Doi thuong"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"

@@ -1,8 +1,10 @@
-package com.thevy.mytask;
+package com.thevy.mytask.analytic;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.thevy.mytask.R;
 
 public class AnalyticActivity extends AppCompatActivity {
 
