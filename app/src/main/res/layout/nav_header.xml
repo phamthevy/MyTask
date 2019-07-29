@@ -20,7 +20,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My header title"
+        android:text="Phạm Thế Vỹ \n ptvy3197@gmail.com"
+        android:textColor="@color/white"
+        android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
 </LinearLayout>

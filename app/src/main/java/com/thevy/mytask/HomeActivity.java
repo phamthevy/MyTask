@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
@@ -17,6 +18,7 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("Home Activity", "Start Home Activity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         mDrawerLayout = findViewById(R.id.drawer_layout);
